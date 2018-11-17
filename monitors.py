@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import subprocess
 import re
 
@@ -59,5 +61,9 @@ for p in pairs:
         cmd += ["--output", m2, "--auto"]
         cmd += [operatorToArg.get(op), m1]
         enabled.append(m2)
+
+for m in monitors:
+    if m not in enabled:
+        cmd += ["--output", m, "--off"]
 
 print(' '.join(cmd))
