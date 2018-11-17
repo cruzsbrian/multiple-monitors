@@ -66,4 +66,5 @@ for m in monitors:
     if m not in enabled:
         cmd += ["--output", m, "--off"]
 
-print(' '.join(cmd))
+#print(' '.join(cmd))
+subprocess.run(cmd)

@@ -11,6 +11,8 @@ Operations can be transitive:
 
 Separate statements with space.
 
+To leave a monitor disabled, don't mention it in the configuration.
+
 Complex example:
 ```
     +---+
