@@ -62,6 +62,12 @@ for p in pairs:
         cmd += [operatorToArg.get(op), m1]
         enabled.append(m2)
 
+# if only one monitor was entered
+if len(config) == 1:
+    m = monitors[int(config)]
+    cmd += ["--output", m, "--auto"]
+    enabled.append(m)
+
 for m in monitors:
     if m not in enabled:
         cmd += ["--output", m, "--off"]
